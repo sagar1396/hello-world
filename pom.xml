@@ -210,7 +210,8 @@
   </prerequisites>
 
          <distributionManagement>
-    <repository>
+<repositories>
+      <repository>
         <id>central</id>
         <name>FACH19200003-releases</name>
         <url>http://localhost:8081/artifactory/hello_world</url>
@@ -220,6 +221,22 @@
         <name>FACH19200003-snapshots</name>
         <url>http://localhost:8081/artifactory/hello_world</url>
     </snapshotRepository>
-</distributionManagement>
+</repositories>
+<pluginRepositories>
+    <pluginRepository>
+        <id>central</id>
+        <url>http://localhost:8081/artifactory/plugins-release</url>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+        <id>snapshots</id>
+        <url>http://localhost:8081/artifactory/plugins-snapshot</url>
+        <releases>
+            <enabled>false</enabled>
+        </releases>
+    </pluginRepository>
+</pluginRepositories>
          
 </project>
